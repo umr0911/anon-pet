@@ -12,7 +12,7 @@
 
 ```sh
 # 从 GitHub
-dsh plugin --profile web add github:<用户名>/<仓库名>
+dsh plugin --profile web add github:umr0911/anon-pet
 
 # 或本地链接
 dsh plugin --profile web add link:/path/to/anon-pet-plugin
