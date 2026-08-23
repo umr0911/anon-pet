@@ -1,0 +1,31 @@
+{
+  "name": "anon-pet",
+  "version": "1.0.0",
+  "description": "Chihaya Anon peek desktop pet: hover to peek, leave to reverse, edge-snap with mirror, resizable, live DeepSeek balance bubble.",
+  "type": "module",
+  "main": "lib/index.js",
+  "exports": {
+    ".": { "default": "./lib/index.js" },
+    "./client": { "default": "./lib/client.js" },
+    "./package.json": "./package.json"
+  },
+  "files": ["lib", "assets", "cordis.patch.yml"],
+  "license": "MIT",
+  "dsh": {
+    "engines": { "dsh": ">=0.1.1-rc.1" },
+    "bundle": { "patch": "./cordis.patch.yml" },
+    "client": {
+      "inject": [
+        "@deepseek-ai/dsh-client-runtime",
+        "@deepseek-ai/dsh-client-connection",
+        "@deepseek-ai/dsh-client-ui-settings",
+        "@deepseek-ai/dsh-client-ui-conversation"
+      ],
+      "platform": "web"
+    }
+  },
+  "peerDependencies": {
+    "react": "^18.2.0",
+    "react-dom": "^18.2.0"
+  }
+}

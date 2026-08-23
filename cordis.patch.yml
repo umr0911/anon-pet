@@ -1,0 +1,6 @@
+# anon-pet bundle patch: inserts its plugin row into the web plugin roster.
+# One row mounts BOTH halves: the host side (serves the GIF + DeepSeek balance
+# route) and the browser side (the floating peek pet rendered from lib/client.js).
+- insert:
+    - id: anon-pet
+      name: 'anon-pet'
